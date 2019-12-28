@@ -1,0 +1,76 @@
+<!DOCTYPE HTML> 
+<html> 
+
+<head> 
+	<title> 
+		dashboard 
+	</title> 
+</head> 
+
+<body style = "text-align:center;"> 
+	
+	<h1 style = "color:black;"> 
+		DASHBOARD 
+	</h1> 
+	
+	<p id = "GFG_UP" style = 
+		"font-size: 15px; font-weight: bold;"> 
+	</p> 
+	
+	<button id = "button" onclick = "Sum()"> 
+		Sum 
+	</button> 
+
+	<button id = "button" onclick = "Subtract()"> 
+		Subtract 
+	</button> 
+
+	<button id = "button" onclick = "Multiplication()"> 
+		Multiplication 
+	</button> 
+
+	<button id = "button" onclick = "Division()"> 
+		Division 
+	</button> 
+	
+	<p id = "GFG_DOWN" style = 
+		"font-size: 24px; font-weight: bold; color: green;"> 
+	</p> 
+	
+	<script> 
+		var up = document.getElementById('GFG_UP'); 
+		var down = document.getElementById('GFG_DOWN'); 
+		var arr = [];
+		var r;
+		var size = 4;
+		
+		for(var i=0; i<size; i++) {
+		arr[i] = prompt('Enter Element ' + (i+1));
+		}
+		
+		up.innerHTML = "Click on the button to check " 
+			+ "the type of element.<br><br>" + arr;
+		
+		function Sum() { 
+			r = arr[Math.floor(Math.random()* arr.length)] + arr[Math.floor(Math.random()* arr.length)];
+			down.innerHTML = (r);
+		} 
+
+		function Subtract() { 
+			r = arr[Math.floor(Math.random()* arr.length)] - arr[Math.floor(Math.random()* arr.length)];
+			down.innerHTML = (r);
+		}
+
+		function Multiplication() { 
+			r = arr[Math.floor(Math.random()* arr.length)] * arr[Math.floor(Math.random()* arr.length)];
+			down.innerHTML = (r);
+		}
+
+		function Division() { 
+			r = arr[Math.floor(Math.random()* arr.length)] / arr[Math.floor(Math.random()* arr.length)];
+			down.innerHTML = (r);
+		}
+	</script> 
+</body> 
+
+</html> 
